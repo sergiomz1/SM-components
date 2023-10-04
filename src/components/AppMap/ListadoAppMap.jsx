@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import AddTarea from "./AddTarea";
+import AddTarea from "./AddTarea.jsx";
 
 const Items = ({ name, visto }) => {
   return (
@@ -13,11 +13,7 @@ const Items = ({ name, visto }) => {
 };
 
 const ListadoAppMap = () => {
-  const [first, setfirst] = useState(lista);
 
-  const addTask = () => {
-    setfirst([...first, {name: 'tema nuevo', visto: false}]) //... express operator para copiar el array y agregar el nuevo elemento al final del array 
-  }
   let lista = [
     { name: "Proyecto Tienda", visto: true },
     { name: "Portafolio", visto: true },
@@ -28,6 +24,13 @@ const ListadoAppMap = () => {
     { name: "React Native", visto: true },
     { name: "UseState", visto: true },
   ];
+
+  const [first, setfirst] = useState(lista);
+
+  const addTask = () => {
+    setfirst([...first, {name: 'tema nuevo', visto: false}]) //... express operator para copiar el array y agregar el nuevo elemento al final del array 
+  }
+
   return (
     <>
       <h1>Listado de temas vistos</h1>
@@ -36,7 +39,7 @@ const ListadoAppMap = () => {
       </ol>
 
       <AddTarea />
-      <button onClick={() => addTask()}>Add New</button>
+      {/* <button onClick={() => addTask()}>Add New</button> */}
     </>
   );
 };

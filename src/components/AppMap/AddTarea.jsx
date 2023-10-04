@@ -1,11 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
-// comentarios de prueba para git
-function AddTarea() {
 
+function AddTarea() {
   const [first, setfirst] = useState('')
+  
   const onInputChange = (event) => {
     setfirst(event.target.value)
+    console.log(first);
   }
 
   const onSubmit = (event) => {
@@ -18,7 +19,7 @@ function AddTarea() {
         type='text'
         placeholder='Algo que entra a la lista'
         value={first}
-        onChange={ (event) => onInputChange(event) }
+        onChange={(event) => onInputChange(event) }
       />
     </form>
     

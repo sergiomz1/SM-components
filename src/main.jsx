@@ -1,21 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import CompoUno from './components/App.jsx'
 import { Uno } from "./components/uno.jsx";
 import { Props } from "./components/Props.jsx";
-import { Contador } from "./components/ContadorC.jsx";
-import ListadoApp from "./components/ListadoApp.jsx";
-import ListadoAppMap from "./components/ListadoAppMap.jsx";
-
+import { ContadorC } from "./components/ContadorC.jsx";
+// import ListadoApp from "./components/ListadoApp.jsx";
+import ListadoAppMap from "./components/AppMap/ListadoAppMap.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <CompoUno/> */}
     {/* <Uno />  */}
     {/* auto conclusive tag */}
     {/* <Props titulo='--> props desde el Padre' name='Raul Peña' />  */}
-    {/* <Contador value={1}/> */}
-    {/* <ListadoApp/> */}
+    {/* <ContadorC value={1}/> */}
     <ListadoAppMap/>
   </React.StrictMode>
 );

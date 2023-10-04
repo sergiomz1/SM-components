@@ -4,7 +4,7 @@ export const Button = ({ value, onClick }) => {
   return <button onClick={() => onClick(value + 1)}>Boton Contar</button>;
 };
 
-export const Contador = ({ value }) => { 
+export const ContadorC = ({ value }) => { 
   const [contador, setContador] = useState(value);  // se usa const para evitar sobre escribir el valor de contador 
 
   const handleClick = (newValue) => {
