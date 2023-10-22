@@ -38,7 +38,7 @@ const ListadoAppMap = () => {
         {first.map(item => <Items key={item.name} name={item.name} visto={item.visto}></Items>)}
       </ol>
 
-      <AddTarea />
+      <AddTarea addTarea = {setfirst}/>
       {/* <button onClick={() => addTask()}>Add New</button> */}
     </>
   );

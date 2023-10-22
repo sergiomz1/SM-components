@@ -1,17 +1,23 @@
 import React from 'react'
 import { useState } from 'react'
 
-function AddTarea() {
+export const AddTarea = ({ addTarea }) => {
   const [first, setfirst] = useState('')
   
   const onInputChange = (event) => {
     setfirst(event.target.value)
-    console.log(first);
+    // console.log(first);
+
   }
 
   const onSubmit = (event) => {
+    const envio = {
+      name: first,
+      visto : false
+    }
     event.preventDefault()
-    console.log(first);
+    // console.log(first);
+    addTarea(tarea => [...tarea, envio])
   }
   return (
     <form onSubmit={onSubmit}>
