@@ -38,7 +38,8 @@ const ListadoAppMap = () => {
         {first.map(item => <Items key={item.name} name={item.name} visto={item.visto}></Items>)}
       </ol>
 
-      <AddTarea addTarea = {setfirst}/>
+      <AddTarea addTarea = {setfirst}/> 
+      {/* AddTarea.jsx se envia la funcion setfirst para que se ejecute en el hijo */}
       {/* <button onClick={() => addTask()}>Add New</button> */}
     </>
   );

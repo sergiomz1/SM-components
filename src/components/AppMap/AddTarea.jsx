@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-export const AddTarea = ({ addTarea }) => {
+export const AddTarea = ({ addTarea }) => { // addTarea es una funcion que viene de ListadoAppMap.jsx
   const [first, setfirst] = useState('')
   
   const onInputChange = (event) => {
@@ -17,7 +17,7 @@ export const AddTarea = ({ addTarea }) => {
     }
     event.preventDefault()
     // console.log(first);
-    addTarea(tarea => [...tarea, envio])
+    addTarea(tarea => [...tarea, envio]) // ...tarea copia el array y agrega el nuevo elemento al final del array
   }
   return (
     <form onSubmit={onSubmit}>
