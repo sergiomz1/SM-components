@@ -4,7 +4,8 @@ import { Uno } from "./components/uno.jsx";
 import { Props } from "./components/Props.jsx";
 import { ContadorC } from "./components/ContadorC.jsx";
 // import ListadoApp from "./components/ListadoApp.jsx";
-import ListadoAppMap from "./components/AppMap/ListadoAppMap.jsx";
+// import ListadoAppMap from "./components/AppMap/ListadoAppMap.jsx";
+import { UsersApp } from "./components/UsersApp.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -12,7 +13,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* auto conclusive tag */}
     {/* <Props titulo='--> props desde el Padre' name='Raul Peña' />  */}
     {/* <ContadorC value={1}/> */}
-    <ListadoAppMap/>
+    {/* <ListadoAppMap/> */}
+    <UsersApp/>
   </React.StrictMode>
 );
 

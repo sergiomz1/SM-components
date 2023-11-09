@@ -9,7 +9,6 @@ export const AddTarea = ({ addTarea }) => { // addTarea es una funcion que viene
     // console.log(first);
 
   }
-
   const onSubmit = (event) => {
     const envio = {
       name: first,

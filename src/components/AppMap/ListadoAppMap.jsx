@@ -28,6 +28,13 @@ const ListadoAppMap = () => {
   const [first, setfirst] = useState(lista);
 
   const addTask = () => {
+    let valor = val.trim()
+    if (valor < 1) return
+    const envio = {
+      id: first.length,
+      nombre: valor,
+      visto: false
+    }
     setfirst([...first, {name: 'tema nuevo', visto: false}]) //... express operator para copiar el array y agregar el nuevo elemento al final del array 
   }
 
